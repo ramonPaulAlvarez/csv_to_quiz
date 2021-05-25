@@ -59,6 +59,8 @@ func main() {
 	// Iterate over questions, skipping header row
 	questionCount := len(quizDF.Records())
 	correctAnswers := 0
+	var userCr string
+
 	for i := 0; i < len(quizDF.Records()); i++ {
 		record := quizDF.Records()[i]
 
@@ -81,10 +83,13 @@ func main() {
 
 		// Display note(s) when available
 		if record[2] != "" {
-			fmt.Printf("%s\n", record[2])
+			fmt.Printf("%s\n\n", record[2])
 		}
-		fmt.Println("")
 
+		fmt.Println("Hit ENTER to continue")
+		fmt.Scanln(&userCr)
+		screen.Clear()
+		screen.MoveTopLeft()
 	}
 	fmt.Printf("Final Grade: %.2f%%\n", float64(correctAnswers)/float64(questionCount)*100)
 }

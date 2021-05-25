@@ -1,6 +1,7 @@
 package main
 
 import (
+	"flag"
 	"fmt"
 	"os"
 	"strconv"
@@ -9,7 +10,26 @@ import (
 	"github.com/go-gota/gota/dataframe"
 )
 
+func loadCsv() (dataframe.DataFrame, error) {
+	/* Load a CSV file into a DataFrame */
+
+	// Identify CSV
+	var csvPath string
+	flag.StringVar(&csvPath, "c", "assets/climate_action_quiz.csv", "Specify CSV file path.")
+	flag.Parse()
+
+	// Load CSV
+	csvfile, err := os.Open(csvPath)
+	if err != nil {
+		fmt.Printf("Unable to open %s!\n", csvPath)
+		return dataframe.New(), err
+	}
+	return dataframe.ReadCSV(csvfile), err
+}
+
 func checkAnswer(userResponse string, answer string) bool {
+	/* Compare the User response to the answer */
+
 	// Convert response and answer to boolean
 	var responseBool bool
 	if strings.ToLower(userResponse) == "y" || strings.ToLower(userResponse) == "yes" {
@@ -24,16 +44,20 @@ func checkAnswer(userResponse string, answer string) bool {
 }
 
 func main() {
-	// Load CSV
-	csvfile, _ := os.Open("assets/climate_action_quiz.csv")
-	quizDF := dataframe.ReadCSV(csvfile)
-	correctAnswers := 0
-	questionCount := len(quizDF.Records())
+	// Load the default or User supplied CSV into a DataFrame
+	quizDF, err := loadCsv()
+	if err != nil {
+		fmt.Println("Exiting.")
+		return
+	}
 
 	// Iterate over questions, skipping header row
+	questionCount := len(quizDF.Records())
+	correctAnswers := 0
 	for i := 0; i < len(quizDF.Records()); i++ {
 		record := quizDF.Records()[i]
 
+		// Skip header row when present
 		if record[0] == "question" {
 			questionCount -= 1
 			continue

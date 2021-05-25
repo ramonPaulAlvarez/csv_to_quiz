@@ -6,7 +6,7 @@ Description
 -----------
 Generate a boolean-only quiz with CSV data.  After each answer has been submitted, display notes about the question when available.  When the User has completed the quiz then display their final grade.
 
-Later iterations will support User supplied CSVs via CLI arguments, but a Climate Action Quiz will presented by default and may be replaced.
+A Climate Action Quiz will presented by default, but a CSV may be provided by the User instead.
 
 Acceptance Criteria
 -------------------
@@ -25,11 +25,11 @@ Usage
 -----
 ```
 go build cmd/csv_to_quiz/main.go
-./main
+./main [-c quiz.csv]
 ```
 
 TODO
 ----
 - Support storing User answers for later analysis
-- Support numeric answers
+- Support additional answer types
 - Implement `goncurses` for the CLI UI

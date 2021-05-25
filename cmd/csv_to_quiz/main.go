@@ -45,10 +45,11 @@ func checkAnswer(userResponse string, answer string) bool {
 }
 
 func main() {
-	screen.Clear()
-	screen.MoveTopLeft()
+	/* Display a quiz to the User */
 
 	// Load the default or User supplied CSV into a DataFrame
+	screen.Clear()
+	screen.MoveTopLeft()
 	quizDF, err := loadCsv()
 	if err != nil {
 		fmt.Println("Exiting.")
@@ -67,20 +68,18 @@ func main() {
 			continue
 		}
 
-		// Display question to User
+		// Display question and request input
 		fmt.Printf("Question #%d of #%d: %s ", i, questionCount, record[0])
-
-		// Request User input
 		var response string
 		fmt.Scan(&response)
 
-		// Check answer and document result
+		// Check answer if applicable and document result
 		correct := checkAnswer(response, record[1])
 		if correct {
 			correctAnswers += 1
 		}
 
-		// Display question note(s) when available
+		// Display note(s) when available
 		if record[2] != "" {
 			fmt.Printf("%s\n", record[2])
 		}

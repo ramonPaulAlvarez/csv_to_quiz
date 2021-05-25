@@ -8,6 +8,7 @@ import (
 	"strings"
 
 	"github.com/go-gota/gota/dataframe"
+	"github.com/inancgumus/screen"
 )
 
 func loadCsv() (dataframe.DataFrame, error) {
@@ -44,6 +45,9 @@ func checkAnswer(userResponse string, answer string) bool {
 }
 
 func main() {
+	screen.Clear()
+	screen.MoveTopLeft()
+
 	// Load the default or User supplied CSV into a DataFrame
 	quizDF, err := loadCsv()
 	if err != nil {
@@ -78,8 +82,9 @@ func main() {
 
 		// Display question note(s) when available
 		if record[2] != "" {
-			fmt.Println(record[2])
+			fmt.Printf("%s\n", record[2])
 		}
+		fmt.Println("")
 
 	}
 	fmt.Printf("Final Grade: %.2f%%\n", float64(correctAnswers)/float64(questionCount)*100)

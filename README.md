@@ -30,6 +30,5 @@ go build cmd/csv_to_quiz/main.go
 
 TODO
 ----
-- Support storing User answers for later analysis
-- Support additional answer types
-- Implement `goncurses` for the CLI UI
+- Support storing User answers for data analysis
+- Support additional answer formats

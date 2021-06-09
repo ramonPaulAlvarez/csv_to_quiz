@@ -1,4 +1,4 @@
-module github.com/go-gota/gota/dataframe
+module github.com/ramonPaulAlvarez/csv_to_quiz
 
 go 1.16
 

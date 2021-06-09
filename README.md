@@ -18,7 +18,7 @@ CSV Example
 ----------------------------------------
 ```
 question,answer,notes
-Are we experiencing the sixth mass extinction?,1,We have identified biodiversity loss that supports an extinction level event.
+Are we experiencing the sixth mass extinction?,true,We have identified biodiversity loss that supports an extinction level event.
 ```
 
 Usage
@@ -27,8 +27,3 @@ Usage
 go build cmd/csv_to_quiz/main.go
 ./main [-c quiz.csv]
 ```
-
-TODO
-----
-- Support storing User answers for data analysis
-- Support additional answer formats

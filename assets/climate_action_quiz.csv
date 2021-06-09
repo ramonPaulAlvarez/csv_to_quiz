@@ -1,15 +1,15 @@
 question,answer,notes
-Do you use a fossil fuel vehicle?,0,Driving an electric vehicle charged with green power reduces your carbon footprint.
-Do you eat meat?,0,The animal agriculture industry induces suffering on a large scale while using excessive energy.  Eating a vegan diet will improve the health of yourself and the planet.
-Do you take cruises?,0,Cruise ships are a major emitter of CO2.
-Do you fly on airplanes?,0,Even short flights produce large amounts of CO2.
-Do you avoid single use plastics?,1,"Most of our plastic ends up in landfills, our oceans, and waterways.  They do not biodegrade either."
-Do you protect wildlife and/or their ecosystems?,1,Forests play a vital role in combating climate change and help to protect and strengthen diverse ecosystems.
-Do you power your home with green energy?,1,Buildings require substantial resources to establish and maintain.  Green development and more effecient use of energy can have a huge impact.
-Do you actively reduce your waste?,1,The less waste we acquire and the more we reuse the less waste we will have to manage.  Mindful consumption will aid clean-up efforts.
-Do you purchase items from eco-friendly companies?,1,"Purchasing items from verified eco-friendly companies may result in less energy consumption, less waste, and support for ecosystems and communities."
-Do you bank eco-friendly?,1,"Banks typically support the fossil fuel industry, but new eco-friendly banks support the future of the planet and communities instead."
-Do you invest eco-friendly?,1,Investing your money into companies that support our future rather than fight it is a good way to take climate action.  Divest from any and all companies that are bad for our future.
-Do you purchase carbon credits?,1,Carbon credits are a good way to fight for the planet when you want to offset your CO2 contributions monetarily to make up for what you cannot reduce directly.
-Do you purchase items locally when possible?,1,"Supporting local businesses helps build community resiliance and independence.  In many cases, it will also reduce the carbon footprint imposed by transporting products long distances."
-Do you grow some of your own food?,1,"Growing your own food is not only a good way to reduce your carbon footprint, but it's also good for your health and helps feed your family when local resources are unavailable."
+Do you use a fossil fuel vehicle?,false,Driving an electric vehicle charged with green power reduces your carbon footprint.
+Do you eat meat?,false,The animal agriculture industry induces suffering on a large scale while using excessive energy.  Eating a vegan diet will improve the health of yourself and the planet.
+Do you take cruises?,false,Cruise ships are a major emitter of CO2.
+Do you fly on airplanes?,false,Even short flights produce large amounts of CO2.
+Do you avoid single use plastics?,true,"Most of our plastic ends up in landfills, our oceans, and waterways.  They do not biodegrade either."
+Do you protect wildlife and/or their ecosystems?,true,Forests play a vital role in combating climate change and help to protect and strengthen diverse ecosystems.
+Do you power your home with green energy?,true,Buildings require substantial resources to establish and maintain.  Green development and more effecient use of energy can have a huge impact.
+Do you actively reduce your waste?,true,The less waste we acquire and the more we reuse the less waste we will have to manage.  Mindful consumption will aid clean-up efforts.
+Do you purchase eco-friendly?,true,"Purchasing items from verified eco-friendly companies may result in less energy consumption, less waste, and support for ecosystems and communities."
+Do you bank eco-friendly?,true,"Banks typically support the fossil fuel industry, but new eco-friendly banks support the future of the planet and communities instead."
+Do you invest eco-friendly?,true,Investing your money into companies that support our future rather than fight it is a good way to take climate action.  Divest from any and all companies that are bad for our future.
+Do you purchase carbon credits?,true,Carbon credits are a good way to fight for the planet when you want to offset your CO2 contributions monetarily to make up for what you cannot reduce directly.
+Do you purchase items locally when possible?,true,"Supporting local businesses helps build community resiliance and independence.  In many cases, it will also reduce the carbon footprint imposed by transporting products long distances."
+Do you grow your own food?,true,"Growing your own food is not only a good way to reduce your carbon footprint, but it's also good for your health and helps feed your family when local resources are unavailable."
